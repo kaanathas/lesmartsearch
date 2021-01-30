@@ -1,0 +1,15 @@
+# Following contains the production configuration used by matching engine runtime.
+
+
+redis.readnode.url=redis://redis:6379
+redis.writenode.url=redis://redis:6379
+
+kafka.me.output.params.bootstrap.servers=kafka-${env_name}:9092
+kafka.me.input.params.bootstrap.servers=kafka-${env_name}:9092
+
+#Environment details
+region=us-east-2
+env.name=${env_name}
+
+app.websocket.publish=true
+app.refdata.inject=false

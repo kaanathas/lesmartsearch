@@ -1,0 +1,61 @@
+Configuration:
+  status: warn
+  Appenders:
+    Console:
+      name: info_console
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+      ThresholdFilter:
+        level: info
+        onMatch: accept
+        onMismatch: deny
+    File:
+      - name: File_Appender
+        fileName: log/orderManager.log
+        PatternLayout:
+          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        ref: info_console
+    logger:
+      - name: App.RESTServer
+        level: trace
+        additivity: true
+        AppenderRef:
+          ref: File_Appender
+      - name: App.OrderCacheRedisImpl
+        level: trace
+        additivity: true
+        AppenderRef:
+          ref: File_Appender
+      - name: App.MEIn
+        level: trace
+        additivity: true
+        AppenderRef:
+          ref: File_Appender
+      - name: App.MEOut
+        level: trace
+        additivity: true
+        AppenderRef:
+          ref: File_Appender
+      - name: App.MDE
+        level: trace
+        additivity: true
+        AppenderRef:
+          ref: File_Appender
+      - name: App.MDP
+        level: trace
+        additivity: true
+        AppenderRef:
+          ref: File_Appender
+      - name: App.RefData
+        level: trace
+        additivity: true
+        AppenderRef:
+          ref: File_Appender
+    
+    
+    

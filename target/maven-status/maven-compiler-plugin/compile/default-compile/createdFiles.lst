@@ -1,0 +1,10 @@
+com/yaalalabs/p8/vert/MainVerticle.class
+com/yaalalabs/p8/vert/CordaApiHandlerVertical.class
+com/yaalalabs/p8/vert/CacheHandlerVertical.class
+com/yaalalabs/p8/vert/WebSocketHandlerVertical.class
+com/yaalalabs/p8/vert/SubscriptionHandlerVertical.class
+com/yaalalabs/p8/vert/QueryHandlerVertical.class
+com/yaalalabs/p8/utils/Events.class
+com/yaalalabs/p8/SmartSearchApp.class
+com/yaalalabs/p8/utils/Utils.class
+com/yaalalabs/p8/vert/OrderUpdateListenerVertical.class
